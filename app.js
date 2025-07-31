@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
@@ -7,6 +6,7 @@ const port = process.env.port || 8000;
 const AuthRoute = require("./Routes/AuthRoute");
 const TaskRoute = require("./Routes/TaskRoute");
 const app = express();
+require("dotenv").config();
 app.use(
   cors({
     origin: process.env.BASE_URL,

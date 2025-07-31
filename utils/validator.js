@@ -10,9 +10,9 @@ const validationWithZodSchema = async (data, schema) => {
   try {
     const result = schema.safeParse(data);
     if (!result.success) {
-      console.log(result.error);
+      // console.log(result.error);
       const errors = result.error.errors.map((error) => error.message);
-      console.log(errors.join(", "));
+      // console.log(errors.join(", "));
       throw new Error(errors.join(", "));
     }
     return result.data;

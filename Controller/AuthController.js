@@ -29,7 +29,7 @@ exports.SignupUser = async (req, res, next) => {
     await user.save();
     return res.status(200).json("User created successfully");
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     return res.status(400).json({ message: err.message });
   }
 };
@@ -66,7 +66,7 @@ exports.SigninUser = async (req, res, next) => {
       throw new Error("Invalid Credentials");
     }
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     return res.status(400).json({ message: err.message });
   }
 };
